@@ -1,0 +1,60 @@
+body{
+    font-family: sans-serif;
+    background-color: #1a365d;
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+    
+}
+.CTA-sect{
+    background-color: #2d4a7c;
+    color: #f7fafc;
+    text-align: center;
+    padding: 50px 20px;
+}
+.Services, .AboutMe, .Contact{
+    background-color: #2d4a7c;
+    color: #f7fafc;
+    padding: 50px 20px;
+    text-align: center;
+    width: 75%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+}
+.Showcase, .Process{
+    background-color: #2d4a7c;
+    color: #f7fafc;
+    padding: 50px 20px;
+    text-align: center;
+    width: 75%;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 20px;
+}
+.contact-text{
+    
+    margin-bottom: 20px;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 15px;
+    border-radius: 20px;
+}
+.bttn{
+    background-color: #4299e1;
+    color:  #e2e8f0;
+    padding: 15px 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-out 0.1s;
+    transition: transform 0.3s ease-out 0.1s;
+}
+.bttn:hover{
+    background-color: #d1d6ff;
+    transform: scale(1.05);
+}
