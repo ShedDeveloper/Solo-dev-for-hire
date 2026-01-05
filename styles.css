@@ -1,3 +1,13 @@
+:root {
+  /* Azure Horizon Palette - Brighter Blues */
+  --color-bg: #1a365d;
+  --color-surface: #2d4a7c;
+  --color-primary: #4299e1;
+  --color-primary-hover: #3182ce;
+  --color-text: #f7fafc;
+  --color-text-secondary: #e2e8f0;
+  --color-success: #48bb78;
+}
 body{
     font-family: sans-serif;
     background-color: #1a365d;
@@ -11,6 +21,18 @@ body{
     color: #f7fafc;
     text-align: center;
     padding: 50px 20px;
+}
+#cta{
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: bold;
+    background-color: #4299e1;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds a slight "lift" */
 }
 .Services, .AboutMe, .Contact{
     background-color: #2d4a7c;
@@ -42,7 +64,7 @@ body{
     border-radius: 20px;
 }
 .bttn{
-    background-color: #4299e1;
+    background-color: var(--color-primary);
     color:  #e2e8f0;
     padding: 15px 30px;
     margin-left: 10px;
@@ -55,6 +77,83 @@ body{
     transition: transform 0.3s ease-out 0.1s;
 }
 .bttn:hover{
-    background-color: #d1d6ff;
+    background-color: var(--color-primary-hover);
     transform: scale(1.05);
+}
+
+/* New */
+
+/* === Services Section Styling === */
+.services-container {
+    display: flex;
+    flex-direction: column; /* Stacks cards on mobile */
+    gap: 2rem; /* Adds space between cards */
+    margin: 2rem 0;
+}
+
+.service-card {
+    background-color: var(--color-surface); /* Uses your theme */
+    border-radius: 12px;
+    padding: 1.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px); /* Lifts card on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: Style for a "featured" or highlighted card */
+.service-card.highlight {
+    border: 2px solid var(--color-primary); /* Accent border */
+}
+
+.service-card h2 {
+    color: var(--color-primary);
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+}
+
+.service-card p {
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.service-card .price {
+    color: var(--color-success);
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+/* Button inside the card */
+.service-card .card-button {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.service-card .card-button:hover {
+    background-color: var(--color-primary-hover);
+}
+
+/* === For larger screens: display cards in a row === */
+@media (min-width: 768px) {
+    .services-container {
+        flex-direction: row; /* Places cards side-by-side */
+        flex-wrap: wrap; /* Allows wrapping if needed */
+        justify-content: center;
+    }
+    .service-card {
+        flex: 1; /* Cards will grow to fill space equally */
+        min-width: 250px; /* Prevents cards from getting too narrow */
+        max-width: 350px; /* Prevents cards from getting too wide */
+    }
 }
